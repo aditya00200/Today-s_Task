@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>My Notes</title>
+    <style>
+        body{
+            background:linear-gradient(to right,rgb(253, 158, 253),rgb(172, 172, 255))
+        }
+        .heading{
+            display:flex;
+            justify-content: center;
+            margin-top:2rem;
+            font-size:5rem;
+            color:white;
+            font-family:"Josefin Sans", sans-serif;
+        }
+        #btn1{
+            color:white;   
+            display:flex;
+            transform:translate(45vw,2vh);
+            border-radius:30px;
+            font-size:1.5rem;
+            padding:12px;
+            background:linear-gradient(#9418fd,#571094);
+            border:none;
+        }
+        #btn1 svg{
+            transform:translate(5px) scale(1.3);
+        }
+        #btn1:hover{
+            background:linear-gradient(#b867ff,#7430af)
+        }
+        #notes{
+            height:70vh;
+            width:40vw;
+            margin-left:30vw;
+            margin-top:5vh;
+            overflow-y:visible;
+        }
+        .note_content{
+            padding-left:20px;
+            position:relative;
+            margin-bottom:3vh;
+            height:20vh;
+            width:40vw;
+            background-color:white;
+            border-radius:20px;
+            overflow:scroll;
+            scrollbar-width:none;
+            transition-property:transform;
+            transition-duration:400ms;
+        }
+        .note_content:hover{
+            transform:scale(1.1);
+        }
+        .editable_text{
+            outline:0;
+        }
+        .delete_btn{
+            position:absolute;
+            bottom:15px;
+            right:-3px;
+            border:none;
+            transform:scale(1.5);
+            background-color:white;
+        }
+        .delete_btn:hover{
+            filter:brightness(1.05);
+        }
+        
+        @media only screen and (max-width:400px){
+            .heading{
+                font-size:3rem;
+            }
+            #btn1{
+                font-size:1rem;
+            }
+            #btn1 svg{
+            transform:translate(5px,-3px) scale(1);
+            }
+            #notes{
+            margin-left:28vw;
+        }
+            .note_content:hover{
+            transform:scale(1.1);
+            }
+            .note_content{
+            height:14vh;
+            width:52vw;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+    <div class="heading">
+        Today's Tasks
+    </div>
+    <div id="add-btn">
+       <button id="btn1">
+    <span>Add New Task</span>
+        <svg id="add_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+        <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+         </svg>
+    </button>
+    </div>
+    <div id="notes">
+    </div>
+        
+    </div>
+    
+    <script src="tutorial_5.js">
+    </script>
+</body>
+</html>
